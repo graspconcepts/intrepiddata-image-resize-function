@@ -63,6 +63,7 @@ namespace ImageFunctions
                         encoder = new GifEncoder();
                         break;
                     default:
+                        encoder = new PngEncoder();
                         break;
                 }
             }
