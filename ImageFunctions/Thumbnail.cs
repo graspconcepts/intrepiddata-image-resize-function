@@ -46,8 +46,7 @@ namespace ImageFunctions
 
             var isSupported = Regex.IsMatch(extension, "gif|png|jpe?g", RegexOptions.IgnoreCase);
 
-            if (isSupported)
-            {
+
                 switch (extension.ToLower())
                 {
                     case "png":
@@ -66,7 +65,6 @@ namespace ImageFunctions
                         encoder = new PngEncoder();
                         break;
                 }
-            }
 
             return encoder;
         }
