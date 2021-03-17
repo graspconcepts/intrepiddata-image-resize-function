@@ -44,7 +44,7 @@ namespace ImageFunctions
 
             extension = extension.Replace(".", "");
 
-            var isSupported = Regex.IsMatch(extension, "gif|png|jpe?g", RegexOptions.IgnoreCase);
+            var isSupported = Regex.IsMatch(extension, extension, RegexOptions.IgnoreCase);
 
 
                 switch (extension.ToLower())
