@@ -44,12 +44,13 @@ namespace ImageFunctions
 
             extension = extension.Replace(".", "");
 
-            var isSupported = Regex.IsMatch(extension, extension, RegexOptions.IgnoreCase);
+            var isSupported = Regex.IsMatch(extension, "gif|png|jpe?g", RegexOptions.IgnoreCase);
 
-
+            if (isSupported)
+            {
                 switch (extension.ToLower())
                 {
-                    case "hello":
+                    case "png":
                         encoder = new PngEncoder();
                         break;
                     case "jpg":
@@ -64,6 +65,7 @@ namespace ImageFunctions
                     default:
                         break;
                 }
+            }
 
             return encoder;
         }
