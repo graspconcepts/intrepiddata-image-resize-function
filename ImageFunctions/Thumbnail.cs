@@ -49,7 +49,7 @@ namespace ImageFunctions
 
                 switch (extension.ToLower())
                 {
-                    case "png":
+                    case "hello":
                         encoder = new PngEncoder();
                         break;
                     case "jpg":
